@@ -3,14 +3,14 @@ import Link from 'next/link'
 
 interface Props {}
 
-const Index: React.FunctionComponent<Props> = () => {
+const About: React.FunctionComponent<Props> = () => {
   return (
     <div className='page'>
-      <div className='main'>Hello Frontend</div>
-      <div className='sub'>We can't wait to see what will you build.</div>
+      <div className='main'>About Us.</div>
+      <div className='sub'>Coded with love in Miami Fl.</div>
       <div className='link'>
-        <Link href='/about'>
-          <a>About</a>
+        <Link href='/'>
+          <a>Home</a>
         </Link>
       </div>
       {/* language=CSS */}
@@ -44,4 +44,4 @@ const Index: React.FunctionComponent<Props> = () => {
   )
 }
 
-export default Index
+export default About
