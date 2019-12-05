@@ -1,16 +1,26 @@
 import * as React from 'react'
 import Link from '../components/Link'
+import { FormattedMessage } from 'react-intl'
 
 interface Props {}
 
 const Index: React.FunctionComponent<Props> = () => {
   return (
     <div className='page'>
-      <div className='main'>Hello Frontend</div>
-      <div className='sub'>We can't wait to see what will you build.</div>
+      <div className='main'>
+        <FormattedMessage id='index.hello' defaultMessage='Hello Frontend' />
+      </div>
+      <div className='sub'>
+        <FormattedMessage
+          id='index.cantwait'
+          defaultMessage={"We can't wait to see what will you build."}
+        />
+      </div>
       <div className='link'>
         <Link href='/about'>
-          <a>About</a>
+          <a>
+            <FormattedMessage id='index.link.about' defaultMessage='About' />
+          </a>
         </Link>
       </div>
       {/* language=CSS */}

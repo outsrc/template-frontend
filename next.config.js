@@ -9,5 +9,6 @@ module.exports = {
   },
   publicRuntimeConfig: {
     basePath: process.env.BASE_PATH,
+    locale: process.env.LOCALE || 'en'
   },
 }

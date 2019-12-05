@@ -1,16 +1,26 @@
 import * as React from 'react'
 import Link from '../components/Link'
+import { FormattedMessage } from 'react-intl'
 
 interface Props {}
 
 const About: React.FunctionComponent<Props> = () => {
   return (
     <div className='page'>
-      <div className='main'>About Us.</div>
-      <div className='sub'>Coded with love in Miami Fl.</div>
+      <div className='main'>
+        <FormattedMessage id='about.about' defaultMessage='About us' />
+      </div>
+      <div className='sub'>
+        <FormattedMessage
+          id='about.coded'
+          defaultMessage='Coded with love in Miami Fl.'
+        />
+      </div>
       <div className='link'>
         <Link href='/'>
-          <a>Home</a>
+          <a>
+            <FormattedMessage id='about.link.home' defaultMessage='Home' />
+          </a>
         </Link>
       </div>
       {/* language=CSS */}
