@@ -1,10 +1,13 @@
 import NextLink, { LinkProps } from 'next/link'
 import { format } from 'url'
+import getConfig from 'next/config'
+
+const { publicRuntimeConfig } = getConfig()
 
 const Link: React.FunctionComponent<LinkProps> = ({ children, ...props }) => (
   <NextLink
     {...props}
-    as={`${process.env.BASE_PATH || ''}${format(props.href)}`}
+    as={`${publicRuntimeConfig.basePath || ''}${format(props.href)}`}
   >
     {children}
   </NextLink>

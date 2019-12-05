@@ -7,7 +7,7 @@ module.exports = {
       '/about': { page: '/about' }
     }
   },
-  env: {
-    BASE_PATH: process.env.BASE_PATH
-  }
+  publicRuntimeConfig: {
+    basePath: process.env.BASE_PATH,
+  },
 }
