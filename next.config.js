@@ -9,5 +9,6 @@ module.exports = {
   },
   publicRuntimeConfig: {
     basePath: process.env.BASE_PATH,
+    appName: process.env.APP_NAME
   },
 }

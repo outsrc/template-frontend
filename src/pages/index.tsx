@@ -1,12 +1,15 @@
 import * as React from 'react'
 import Link from '../components/Link'
+import getConfig from 'next/config'
 
 interface Props {}
+
+const { publicRuntimeConfig } = getConfig()
 
 const Index: React.FunctionComponent<Props> = () => {
   return (
     <div className='page'>
-      <div className='main'>Hello Frontend</div>
+      <div className='main'>Hello, from {publicRuntimeConfig.appName}</div>
       <div className='sub'>We can't wait to see what will you build.</div>
       <div className='link'>
         <Link href='/about'>
