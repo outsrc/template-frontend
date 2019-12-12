@@ -6,12 +6,25 @@ interface Props {}
 const About: React.FunctionComponent<Props> = () => {
   return (
     <div className='page'>
-      <div className='main'>About Us.</div>
-      <div className='sub'>Coded with love in Miami Fl.</div>
-      <div className='link'>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
+      <div className='content'>
+        <div className='main'>About Us.</div>
+        <div className='sub'>
+          We are a small team of software engineers scattered around the globe,
+          passionate about building software.
+        </div>
+        <div className='sub'>
+          Although incorporated on sunny Miami, Florida, US. We accept business
+          proposal from all over the world.
+        </div>
+        <div className='sub'>
+          Send us an email to:
+          <a href='mailto:contact@codexsw.com'>contact@codexsw.com</a>
+        </div>
+        <div className='link'>
+          <Link href='/'>
+            <a>Home</a>
+          </Link>
+        </div>
       </div>
       {/* language=CSS */}
       <style jsx>{`
@@ -27,6 +40,12 @@ const About: React.FunctionComponent<Props> = () => {
           justify-content: center;
           align-items: center;
         }
+        .content {
+          display: flex;
+          flex-direction: column;
+          margin: 0 20px;
+          max-width: 500px;
+        }
         .main {
           font-size: 60px;
         }
@@ -34,6 +53,14 @@ const About: React.FunctionComponent<Props> = () => {
           font-size: 23px;
           color: #666;
           font-weight: 200;
+          margin-top: 20px;
+          text-align: left;
+        }
+        .sub a {
+          color: #007dff;
+        }
+        .link {
+          margin-top: 20px;
         }
         .link a {
           color: #007dff;
