@@ -1,25 +1,17 @@
 import * as React from 'react'
 import Link from '../components/Link'
-import CodexswLogo from '../components/CodexswLogo'
 
 interface Props {}
 
 const Index: React.FunctionComponent<Props> = () => {
   return (
     <div className='page'>
-      <div className='content'>
-        <div className='logo'>
-          <CodexswLogo />
-        </div>
-        <div className='main'>We build software</div>
-        <div className='sub'>
-          Web and mobile applications, infrastructure development, Automation
-        </div>
-        <div className='link'>
-          <Link href='/about'>
-            <a>About</a>
-          </Link>
-        </div>
+      <div className='main'>Hello Frontend</div>
+      <div className='sub'>We can't wait to see what will you build.</div>
+      <div className='link'>
+        <Link href='/about'>
+          <a>About</a>
+        </Link>
       </div>
       {/* language=CSS */}
       <style jsx>{`
@@ -35,12 +27,6 @@ const Index: React.FunctionComponent<Props> = () => {
           justify-content: center;
           align-items: center;
         }
-        .content {
-          display: flex;
-          flex-direction: column;
-          margin: 0 20px;
-          max-width: 500px;
-        }
         .main {
           font-size: 60px;
         }
@@ -48,9 +34,6 @@ const Index: React.FunctionComponent<Props> = () => {
           font-size: 23px;
           color: #666;
           font-weight: 200;
-        }
-        .link {
-          margin-top: 20px;
         }
         .link a {
           color: #007dff;
