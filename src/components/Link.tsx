@@ -5,10 +5,7 @@ import getConfig from 'next/config'
 const { publicRuntimeConfig } = getConfig()
 
 const Link: React.FunctionComponent<LinkProps> = ({ children, ...props }) => (
-  <NextLink
-    {...props}
-    as={`${publicRuntimeConfig.basePath || ''}${format(props.href)}`}
-  >
+  <NextLink {...props} as={`${publicRuntimeConfig.basePath || ''}${format(props.href)}`}>
     {children}
   </NextLink>
 )

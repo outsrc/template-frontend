@@ -8,6 +8,6 @@ module.exports = {
     }
   },
   publicRuntimeConfig: {
-    basePath: process.env.BASE_PATH,
-  },
+    basePath: process.env.BASE_PATH
+  }
 }
